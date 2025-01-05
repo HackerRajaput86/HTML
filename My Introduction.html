@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Introduction</title>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Upload Your Info</h1>
+        <form id="infoForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <style>
+        body {
+            background-color: rgb(61, 70, 189);
+            color: rgb(209, 231, 12);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ee3709;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: navy;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+
+   
+
+
+    <script>
+        // Form submit event
+            document.getElementById("infoForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the default form submission
+
+            // Get user input
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const description = document.getElementById("description").value;
+
+            // Display the information in the console (you can modify this to display it on the page)
+            console.log("Full Name:", name);
+            console.log("Email:", email);
+            console.log("Description:", description);
+
+            // Optionally, you can reset the form after submission
+            document.getElementById("infoForm").reset();
+         });
+    </script>
+
+</body>
+</html>
